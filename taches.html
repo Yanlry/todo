@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tâches à réaliser</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tâches à réaliser</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="taches.html">Tâches à réaliser</a></li>
+                <li><a href="objectifs.html">Objectifs à atteindre</a></li>
+                <li><a href="meditation.html">Jeux de méditation</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="task-section">
+            <h2>Ajouter une Tâche</h2>
+            <form id="task-form">
+                <label for="task-input">Titre de la Tâche</label>
+                <input type="text" id="task-input" style="width: 100%; padding: 10px; font-size: 1.2rem; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; margin-bottom: 10px;" required>
+                <label for="task-description">Description de la Tâche (optionnelle)</label>
+                <textarea id="task-description" style="width: 100%; padding: 10px; font-size: 1.2rem; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; margin-bottom: 10px;"></textarea>
+                <button type="submit" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-size: 1.2rem; cursor: pointer; margin-bottom: 20px;">Ajouter</button>
+            </form>
+            
+            <div class="task-container">
+                <div class="task-column">
+                    <h2>Tâches à Réaliser</h2>
+                    <ul id="task-list">
+                        <!-- Liste des tâches à réaliser sera remplie par JavaScript -->
+                    </ul>
+                </div>
+                <div class="task-column">
+                    <div class="toggle-container">
+                        <h2 id="completed-tasks-header">Tâches Accomplies</h2>
+                        <button id="toggle-completed-tasks" aria-expanded="false">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
+                                <path d="M19 15l-7-7-7 7" stroke="#1d3557" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="completed-tasks-container" class="hidden">
+                        <ul id="completed-task-list">
+                            <!-- Liste des tâches accomplies sera remplie par JavaScript -->
+                        </ul>
+                        <button id="clear-completed-tasks" class="hidden" style="background-color: #DC3545; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-size: 1.2rem; cursor: pointer;">Vider la Liste</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Gestion de Vie Personnelle. Tous droits réservés.</p>
+    </footer>
+
+    <script src="task-script.js"></script>
+</body>
+</html>

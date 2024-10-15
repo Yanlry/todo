@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Méditation du jour</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="meditation.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Jeux de méditation</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="taches.html">Tâches à réaliser</a></li>
+                <li><a href="objectifs.html">Objectifs à atteindre</a></li>
+                <li><a href="meditation.html">Jeux de méditation</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="meditation" class="container">
+            <div class="quote-card">
+                <p id="quote"></p>
+                <div id="fill-in-the-blank">
+                    <p>Complétez la citation :</p>
+                    <p id="incomplete-quote"></p>
+                    <p id="author"></p>
+                    <input type="text" id="user-input" placeholder="Entrez votre réponse">
+                    <button id="submit-answer" class="btn">Soumettre</button>
+                    <button id="give-up" class="btn">Abandonner</button>
+                    <p id="feedback"></p>
+                    <button id="continue" class="btn" style="display: none;">Continuer</button>
+                    <button id="restart" class="btn" style="display: none;">Recommencer</button>
+                </div>
+            </div>
+
+            <div id="score-card" class="score-card">
+                <h3>Score</h3>
+                <p id="score">0</p>
+                <h3>Meilleur Score</h3>
+                <p id="high-score">0</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gestion de Vie Personnelle. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

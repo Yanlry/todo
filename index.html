@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tableau de bord</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="taches.html">Tâches à réaliser</a></li>
+                <li><a href="objectifs.html">Objectifs à atteindre</a></li>
+                <li><a href="meditation.html">Jeux de méditation</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="dashboard">
+            <h2>Résumé de Votre Avancement</h2>
+
+            <!-- Row for Tasks and Goals -->
+            <div class="dashboard-row">
+                <!-- Tâches à Réaliser -->
+                <div class="dashboard-card">
+                    <h3 class="task-title-home">Tâches à réaliser</h3>
+                    <ul id="task-list">
+                        <!-- Liste des tâches sera remplie par JavaScript -->
+                    </ul>
+                    <a href="taches.html" class="btn">Voir toutes les Tâches</a>
+                </div>
+                
+                <!-- Objectifs à Atteindre -->
+                <div class="dashboard-card">
+                    <h3>Objectifs à atteindre</h3>
+                    <ul id="goal-list">
+                        <!-- Liste des objectifs sera remplie par JavaScript -->
+                    </ul>
+                    <a href="objectifs.html" class="btn">Voir tous les objectifs</a>
+                </div>
+            </div>
+
+            <!-- Citation Inspirante en dessous -->
+            <div class="citation-card">
+                <h3>Citation Inspirante</h3>
+                <p id="quote"></p>
+                <p id="author"></p>
+                <button id="new-quote">Nouvelle Citation</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gestion de Vie Personnelle. Tous droits réservés.</p>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="meditation.js"></script>
+</body>
+</html>

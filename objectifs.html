@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objectifs à atteindre</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Objectifs à atteindre</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="taches.html">Tâches à réaliser</a></li>
+                <li><a href="objectifs.html">Objectifs à atteindre</a></li>
+                <li><a href="meditation.html">Jeux de méditation</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Section pour définir un nouvel objectif -->
+        <section id="objectif-definir" class="dashboard-card">
+            <h2>Définir un nouvel objectif</h2>
+            <form id="goal-form">
+                <label for="goal-name">Nom de l'objectif :</label>
+                <input type="text" id="goal-name" required>
+                <label for="start-date">Date de début :</label>
+                <input type="date" id="start-date" required>
+                <label for="end-date">Date de fin :</label>
+                <input type="date" id="end-date" required>
+                <button type="submit">Ajouter</button>
+            </form>
+        </section>
+
+        <!-- Section pour afficher les objectifs en cours et complétés -->
+        <section id="goal-section" class="task-container">
+            <!-- Objectifs en cours -->
+            <div id="objectif-en-cours" class="task-column">
+                <h2>Objectifs en cours</h2>
+                <div id="progress-bar-container">
+                    <div class="progress-bar">
+                        <div id="progress" class="progress"></div>
+                        <span id="progress-text" class="progress-text">0%</span>
+                    </div>
+                </div>
+                <ul id="goal-list">
+                    <!-- Les objectifs en cours seront ajoutés ici dynamiquement -->
+                </ul>
+            </div>
+
+            <!-- Objectifs complétés -->
+            <div id="completed-goals" class="task-column">
+                <h2>Objectifs complétés</h2>
+                <div id="average-completion">
+                   En moyenne vous terminer vos objectifs à <span id="average-percentage">0%</span>
+                </div>
+                
+                <ul id="completed-goal-list">
+                    <!-- Les objectifs complétés seront ajoutés ici dynamiquement -->
+                </ul>
+                <button id="clear-completed-goals" class="clear-button">Vider la Liste</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2024 Gestion de vie personnelle. Tous droits réservés.</p>
+    </footer>
+
+    <script src="objectifs.js"></script>
+</body>
+</html>
